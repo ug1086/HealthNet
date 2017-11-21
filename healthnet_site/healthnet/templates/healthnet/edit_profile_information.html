@@ -1,0 +1,28 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+{% include "healthnet/header.html" %}
+
+<div id="edit_profile_information_container">
+    <div id="edit_profile_information_header"><h1>Profile Information</h1></div>
+
+    <div id="edit_profile_information_information">
+        <form method="post">
+            {% csrf_token %}
+            <ul id="edit_profile_information_information_list">
+                <li>Username: {{user.username}}</li>
+                <li>First Name: {{first_name}}</li>
+                <li>Last Name: {{last_name}}</li>
+                <li>Email: {{user.email}}</li>
+                <li>Contact Number: <input type="text" name="contact_number" value="{{contact_number}}" maxlength="10"></li>
+                <li>Emergency Contact Number: <input type="text" name="emergency_contact_number" value="{{emergency_contact_number}}" maxlength="10"></li>
+            </ul>
+            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="password" value="Change Password">
+            <input type="submit" name="cancel" value="Cancel">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

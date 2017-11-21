@@ -1,0 +1,40 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+{% include "healthnet/header.html" %}
+
+<div id="hospital_admin_create_user_container">
+    <div id="hospital_admin_create_user_header"><h1>User Creation</h1></div>
+
+    <div id="hospital_admin_create_user_form">
+        <form method="post">
+            {% csrf_token %}
+            <h3>User Type:</h3>
+            <input type="radio" name="user_type" value="nurse">Nurse
+            <input type="radio" name="user_type" value="doctor"> Doctor
+            <input type="radio" name="user_type" value="admin">Administrator
+            <ul id="hospital_admin_create_user_form_fields">
+                <li>Username: <input type="text" name="username"></li>
+                <li>First Name: <input type="text" name="first_name"></li>
+                <li>Last Name: <input type="text" name="last_name"></li>
+                <li>Email: <input type="email" name="email"></li>
+                <li>Hospital:
+                    <select name="hospital">
+                        <option>Select a hospital</option>
+                        {% if hospital_list %}
+                            {% for hospital in hospital_list %}
+                                <option value="{{hospital.id}}">{{ hospital }}</option>
+                            {% endfor %}
+                        {% endif %}
+                    </select>
+                </li>
+                <li>Password: <input type="password" name="password"></li>
+            </ul>
+            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="back" value="Back">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

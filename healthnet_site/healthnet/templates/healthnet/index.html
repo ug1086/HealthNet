@@ -1,0 +1,37 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+<div class="header_base">
+</div>
+
+<div class="header_base2">
+    <h1 id="healthnet_title"><i class="fa fa-heartbeat" id="net_color" aria-hidden="true"></i> HEALTH<span id="net_color">NET</span></h1>
+</div>
+
+<div class="container col-md-12">
+    <div class="row">
+        <div><img src="http://www.kriesi.at/themes/enfold-medical/files/2016/02/doc-1-1500x630.jpg" width="100%" height="630">
+        <div id="index_container" class="col-md-6">
+
+
+            <div id="index_paragraph">
+                <h3 id="welcome">Welcome to HealthNet</h3>
+                <p>HealthNet gives hospitals an easy way to manage their daily functions. It allows the hospitals to easily find patient and employee data. Our goal: to provide a convenient, straightforward system which improves the connection between patients and hospital employees.</p>
+            </div>
+            <div id="index_buttons">
+                <form method="post">
+                    {% csrf_token %}
+                    <ul id="index_button_list">
+                        <li><input class="btn btn-info"  type="submit" name="button_choice" value="Login"></li>
+                        <li><input class="btn btn-info" type="submit" name="button_choice" value="Register"></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

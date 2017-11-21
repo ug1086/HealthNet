@@ -1,0 +1,19 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+    <div id="login_container">
+        <div id="login_header"><h1>Login to HealthNet</h1></div>
+
+        <form id="login_form" method="post" >
+            {% csrf_token %}
+            Username: <input type="text" name="username" value="" size="50" />
+            <br />
+            Password: <input type="password" name="password" value="" size="50" />
+            <br />
+
+            <input type="submit" name="submit" value="Submit" />
+            <input type="submit" name="back" value="Back">
+        </form>
+    </div>
+
+{% endblock %}

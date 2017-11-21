@@ -1,0 +1,60 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+{% include "healthnet/header.html" %}
+
+<div id="view_appointment_container">
+    <div id="view_appointment_header"><h1> Appointment Details </h1></div>
+    <table border="0" class="center" id="view_appointment_table">
+        <tr>
+            <td>
+                <label>Doctor:</label>
+            </td>
+            <td>
+                {{ doctor }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Patient:</label>
+
+            </td>
+            <td>
+                {{ patient }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Start:</label>
+            </td>
+            <td>
+                {{ start }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>End:</label>
+            </td>
+            <td>
+                {{ end }}
+            </td>
+        </tr>
+    </table>
+    <br>
+    <div id="view_appointment_buttons">
+        <form method="post">
+            {% csrf_token %}
+            {% if user_type != "nurse" %}
+               <input type="submit" name="delete" value="Delete">
+            {% endif %}
+            <input type="submit" name="edit" value="Edit">
+            <input type="submit" name="back" value="Back to Calendar">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

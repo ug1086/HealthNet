@@ -1,0 +1,29 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+    <div id="registration_container">
+        <h1 id="registration_header">Register with HealthNet</h1>
+
+        {% if registered %}
+        <strong>thank you for registering!</strong>
+        <a href="healthnet">Return to the homepage.</a><br />
+            {% else %}
+
+            <form class="form-horizontal" id="user_form" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                <!--for cross reference -->
+                {% csrf_token %}
+
+                <!-- Display each form. The as_p method wraps each element in a paragraph
+                      -->
+                {{ user_form.as_p }}
+                {{ profile_form.as_p }}
+
+                <!-- button to click to submit the form. -->
+                <input type="submit" name="submit" value="Register" />
+                <input type="submit" name="back" value="Back">
+                    </div>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

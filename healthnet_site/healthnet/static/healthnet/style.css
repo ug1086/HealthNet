@@ -1,0 +1,423 @@
+
+
+.header_base {
+    height: 40px;
+    width: 100%;
+    margin:0;
+    text-align:center;
+    background-color: #40a8e4;
+}
+
+.header_base2 {
+    height: 80px;
+    width: 100%;
+    margin:0;
+    text-align:center;
+    background-color: white;
+}
+
+#net_color{
+    color:#5fb4e4;
+}
+
+#index_container {
+    background: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 0.8;
+    margin-top: -500px;
+    margin-left: 60px;
+}
+#welcome{
+    text-align:center;
+    color:black;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+#index_header {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-weight: normal;
+}
+
+#healthnet_title{
+    color: #022241;
+    font-size: 40px;
+}
+
+#index_paragraph {
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    color: #888888;
+}
+
+#index_button_list {
+    text-align: center;
+    padding-right: 60px;
+}
+
+#index_button_list li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+input[type=submit] {
+    width: 10em;  height: 2em;
+}
+
+#login_header {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+#login_form {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#login_container {
+    background: #40a8e4;
+    padding-bottom:20px;
+}
+
+#invalid_login_container {
+    background: #40a8e4;
+}
+
+#invalid_login_information {
+    color: white;
+    font-weight: bold;
+}
+
+#appointments_container {
+    background: dodgerblue;
+}
+
+#appointments_header {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#appointments_appointment_list {
+    text-align: center;
+}
+
+#appointments_appointment_list li {
+    list-style-type: none;
+}
+
+#appointments_no_appointment_message {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#appointments_create_appointment_button {
+    text-align: center;
+}
+
+#create_appointment_container {
+    background: dodgerblue;
+}
+
+#create_appointment_header {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#create_appointment_form {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#view_appointment_container {
+    background: dodgerblue;
+}
+
+#view_appointment_header {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#view_appointment_table {
+    color: white;
+    font-weight: bold;
+}
+
+#view_appointment_buttons {
+    text-align: center;
+}
+
+#update_appointment_container {
+    background: dodgerblue;
+}
+
+#update_appointment_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#update_appointment_table {
+    color: white;
+    font-weight: bold;
+}
+
+#update_appointment_buttons {
+    text-align: center;
+}
+
+#delete_appointment_container {
+    background: dodgerblue;
+}
+
+#delete_appointment_header {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#delete_appointment_information {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#edit_profile_information_container {
+    background: dodgerblue;
+}
+
+#edit_profile_information_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#edit_profile_information_information {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#edit_profile_information_information_list li {
+    list-style-type: none;
+}
+
+#edit_profile_information_failure_container {
+    background: dodgerblue;
+}
+
+#edit_profile_information_failure_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#edit_profile_information_failure_back_button {
+    text-align: center;
+}
+
+#hospital_admin_index_container {
+    background: dodgerblue;
+}
+
+#hospital_admin_index_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_index_buttons {
+    text-align: center;
+}
+
+#hospital_admin_create_user_container {
+    background: dodgerblue;
+}
+
+#hospital_admin_create_user_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_create_user_form {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_create_user_form_fields li {
+    list-style-type: none;
+}
+
+#hospital_admin_create_user_success_container {
+    background: dodgerblue;
+}
+
+#hospital_admin_create_user_success_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_create_user_success_back_button {
+    text-align: center;
+}
+
+#hospital_admin_create_user_failure_container {
+    background: dodgerblue;
+}
+
+#hospital_admin_create_user_failure_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_create_user_failure_back_button {
+    text-align: center;
+}
+
+#hospital_admin_view_logs_container {
+    background: dodgerblue;
+}
+
+#hospital_admin_view_logs_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_view_logs_logs {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#hospital_admin_view_logs_logs li {
+    list-style-type: none;
+}
+
+#hospital_admin_view_logs_buttons {
+    text-align: center;
+}
+
+#hospital_admin_view_logs_create_filters_container {
+    background: dodgerblue;
+}
+
+#hospital_admin_view_logs_create_filters_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_view_logs_create_filters_form {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#hospital_admin_view_logs_choose_filters_container {
+    background: dodgerblue;
+}
+
+#hospital_admin_view_logs_choose_filters_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hospital_admin_view_logs_choose_filters_form {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#hospital_admin_view_logs_choose_filters_form_list li {
+    list-style-type: none;
+}
+
+.header {
+    background: dodgerblue;
+}
+
+#healthnet_header {
+    text-align: left;
+    color: white;
+    padding-top: 3.5%;
+}
+
+#welcome_header {
+    text-align: right;
+    color: white;
+    right: 5%;
+    position: relative;
+}
+
+#registration_container {
+    background: dodgerblue;
+}
+
+#registration_header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#user_form {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#change_password_container {
+    background: dodgerblue;
+}
+
+#change_password_form {
+    text-align: center;
+}
+
+#change_password_form_list {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#change_password_form_list li {
+    list-style-type: none;
+}
+
+#invalid_password_change_1_container {
+    background: dodgerblue;
+    color: white;
+    font-weight: bold;
+}
+
+#invalid_password_change_2_container {
+    background: dodgerblue;
+    color: white;
+    font-weight: bold;
+}

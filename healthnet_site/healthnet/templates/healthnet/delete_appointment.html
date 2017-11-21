@@ -1,0 +1,53 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+{% include "healthnet/header.html" %}
+
+<div id="delete_appointment_container">
+    <div id="delete_appointment_header"><h1>Delete Appointment</h1></div>
+
+    <div id="delete_appointment_information">
+        <h2>Are you sure you wish to delete this appointment?</h2>
+
+        <table border="0" class="center" id="delete_appointment_table">
+        <tr>
+            <td>
+                <label>Doctor:</label>
+            </td>
+            <td>
+                {{ doctor }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Patient:</label>
+
+            </td>
+            <td>
+                {{ patient }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Date/Time:</label>
+            </td>
+            <td>
+                {{ datetime }}
+            </td>
+        </tr>
+    </table>
+    <br>
+    <div id="delete_appointment_buttons">
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" name="confirm" value="Yes">
+            <input type="submit" name="deny" value="No">
+        </form>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

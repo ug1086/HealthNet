@@ -1,0 +1,21 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+{% include "healthnet/header.html" %}
+
+<div id="edit_profile_information_failure_container">
+    <div id="edit_profile_information_failure_header">
+        <h1>Edit Failed</h1>
+        <h2>There was an error processing the entered phone numbers.</h2>
+    </div>
+
+    <div id="edit_profile_information_failure_back_button">
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" name="back" value="Back">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

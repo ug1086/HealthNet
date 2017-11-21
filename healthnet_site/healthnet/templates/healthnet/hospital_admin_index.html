@@ -1,0 +1,20 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+{% include "healthnet/header.html" %}
+
+<div id="hospital_admin_index_container">
+    <div id="hospital_admin_index_header"><h1>Hospital Admin</h1></div>
+
+    <div id="hospital_admin_index_buttons">
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" name="create" value="Create a New User">
+            <input type="submit" name="view_logs" value="View Logs">
+            <input type="submit" name="logout" value="Logout">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

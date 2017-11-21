@@ -1,0 +1,82 @@
+{% extends 'healthnet/base.html' %}
+
+{% block main_content %}
+
+{% include "healthnet/header.html" %}
+
+<div id="create_appointment_container">
+    <div id="create_appointment_header"><h1> Create Appointment </h1></div>
+
+    <div id="create_appointment_form">
+            <form method="post">
+            {% csrf_token %}
+
+            <table border="0" class="center">
+                {% if user.userprofile.user_type == 'nurse' or user.userprofile.user_type == 'patient'%}
+                <tr>
+                    <td>
+                        <label>Doctor:</label>
+                    </td>
+                    <td>
+                        <select name="doctor">
+                            <option>Select a doctor</option>
+                            {% if doc_list %}
+                                {% for doctor in doc_list %}
+                                    <option value="{{doctor.id}}">{{ doctor }}</option>
+                                {% endfor %}
+                            {% endif %}
+                        </select>
+                    </td>
+                </tr>
+                {% endif %}
+
+                {% if user.userprofile.user_type == 'nurse' or user.userprofile.user_type == 'doctor' %}
+                <tr>
+                    <td>
+                        <label>Patient:</label>
+
+                    </td>
+                    <td>
+                        <select name="patient">
+                            <option>Select a patient</option>
+                            {% if patient_list %}
+                                {% for patient in patient_list %}
+                                    <option value="{{patient.id}}">{{ patient }}</option>
+                                {% endfor %}
+                            {% endif %}
+                        </select>
+                    </td>
+                </tr>
+                {% endif %}
+
+                <tr>
+                    <td>
+                        <label>Start Date/Time:</label>
+                    </td>
+                    <td>
+                        <input name="start" type="datetime-local">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>End Date/Time:</label>
+                    </td>
+                    <td>
+                        <input name="end" type="datetime-local">
+                    </td>
+                </tr>
+            </table>
+            <br>
+                {% if doc_conflict %}
+                    That doctor already has an appointment scheduled. Try a different time.<br>
+                {% elif doc_conflict %}
+                    That patient already has an appointment scheduled. Try a different time.<br>
+                {% endif %}
+            <input name="create" type="submit">
+            <input type="submit" name="back" value="Back to Calendar">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
